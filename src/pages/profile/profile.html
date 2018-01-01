@@ -4,30 +4,46 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-header class="myheader">
-    
-  
+
+
+<ion-header>
     <ion-navbar color="mybg" >
-      
-        
-        <h6 color="white" id="l1">Profile</h6>
-        
-<img alt="logo" height="65" width="200"  src="../assets/imgs/zensar.png" id="l2"> 
-        <ion-buttons  >
-            <button ion-button   id="l3" (click)="Settings" ><ion-icon name="md-notifications"></ion-icon></button>
-        </ion-buttons>
-
-    </ion-navbar>
+     <ion-row  id="navbar-border">
+          <ion-col><pre>    Profile </pre></ion-col>
+          <ion-col><pre>        <ion-icon name="logo-android"></ion-icon></pre> </ion-col>
+          <ion-col><pre>              <button (click)="profileNotfy()" ><ion-icon name="md-notifications"></ion-icon></button>
+      </pre></ion-col>
+      </ion-row>
+ </ion-navbar>
 </ion-header>
- 
-
-<!--ion-header>
-  <ion-navbar color="primary">
-    <ion-title>This is Profile Page  </ion-title>
+  
     
-  </ion-navbar></ion-header-->
 
-
-<ion-content padding class="bg-image">
-
+<ion-content padding >
+    
+    <ion-card >
+         
+        <ion-grid id="seprateline">
+            <!--ion-row text-center> <pre><img src="../assets/imgs/Ram.jpg" id="circle">       Ram Dhangar</pre></ion-row><br--> 
+           
+            <ion-row >
+                <ion-col><img src="../assets/imgs/Ram.jpg" id="circle"></ion-col><br><br>
+                <ion-col id="mycaption">
+                    Ram Dhangar <br> 49822 | Jr. S/W Engg.
+                </ion-col>
+                </ion-row> <br>
+            <!--ion-row text-center> <pre><img src="../assets/imgs/Ram.jpg" id="circle" > <p class="ex2"> Ram Dhangar <br>49822 | Jr.S/W Engg.  </p> </pre></ion-row><br--> 
+            
+            
+            <ion-row text-center > <pre>   BU           IM </pre></ion-row><br>  
+            <ion-row text-center > <pre>   Gender        M  </pre></ion-row><br>
+            <ion-row text-center> <pre>   Grade         G0</pre><br></ion-row><br>
+            <ion-row text-center> <pre>   DOB           10-02-1992</pre><br></ion-row><br>
+            <ion-row text-center> <pre>   Contact       9753045665</pre><br></ion-row><br>
+            <ion-row text-center> <pre>   Email         ramlal.dhangar@zensar.com</pre><br></ion-row>
+            
+                    
+        </ion-grid>
+        
+       </ion-card>
 </ion-content>
