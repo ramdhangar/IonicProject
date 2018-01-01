@@ -1,0 +1,10 @@
+Here I add upadted login and profile folder all files
+
+Then 
+-----Generate Provider....
+Here I Created Data provider in src folder using 
+command -----> ionic g provider Data
+Then
+inside data folder data.ts file generated automatically which i added 
+
+
