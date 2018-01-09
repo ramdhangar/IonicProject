@@ -14,10 +14,11 @@ import { LoginPage } from '../pages/login/login';
 
 import { PeoplePage } from '../pages/people/people';
 import { AssetPage } from '../pages/asset/asset';
-
-
 import { TabsPage } from '../pages/tabs/tabs';
 import { SoftwarePage } from '../pages/software/software';
+import { DataProvider} from '../providers/data/data';
+
+
 
 @NgModule({
   declarations: [
@@ -26,7 +27,6 @@ import { SoftwarePage } from '../pages/software/software';
     ProfilePage,
     ResourcePage,
     FaqPage,
-
     PeoplePage,
     AssetPage,
     SoftwarePage,
@@ -44,18 +44,20 @@ import { SoftwarePage } from '../pages/software/software';
     ProfilePage,
     ResourcePage,
     FaqPage,
-
     PeoplePage,
     AssetPage,
     SoftwarePage,
     LoginPage,
-
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    
+   DataProvider,  /*I created Data provider*/
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    
+   
   ]
 })
 export class AppModule {}

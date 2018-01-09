@@ -8,6 +8,21 @@ background-position: center;
 
 
 }
+
+ion-row#navbar-border
+ {
+      border-bottom:0px solid;
+     
+ }
+ion-row
+{
+ 
+    
+    border-bottom:1px solid grey; 
+   
+}
+
+
 }
 .title-image {
     margin-top: 8px;
@@ -50,3 +65,40 @@ margin-top: -45px;
     color: black ;
         
 }
+
+    #circle {
+        
+	width: 70px;
+	height: 70px;
+     margin-top: 10px;
+   margin-left: 200px;
+ 
+   position: relative;
+        
+	//background: white;
+	-moz-border-radius: 50px;
+	-webkit-border-radius: 50px;
+	border-radius: 50px;
+}
+#mycol
+{
+   margin-left:-140px;
+   margin-top:-50px;
+   
+  
+}
+
+#mycaption
+{
+ 
+     margin-top: 83px;
+   margin-left: -130px;
+ 
+}
+
+#ZenRAS_Logo
+{
+    height: 35px;
+    width: 45px;
+}
+

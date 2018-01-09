@@ -5,26 +5,43 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>login</ion-title>
-  </ion-navbar>
-
+    <ion-navbar color="mybg" ><pre>                                <ion-icon name="logo-android" >Logo</ion-icon>             </pre></ion-navbar>
 </ion-header>
 
-
-<ion-content padding>
-<ion-list>
-
-  <ion-item>
+<ion-content padding >
+<ion-card>
+    <br><br>
+  <ion-item id="usr-login">
     <!--ion-label fixed>Username</ion-label-->
-    <ion-input type="text" value="" placeholder="UserName" ion-item-name="laptop"></ion-input>
+    <ion-input type="text" value=""  placeholder="UserName"   ion-item-name="laptop"  name='username' [(ngModel)]="username"></ion-input>
   </ion-item>
 
-  <ion-item>
+  <ion-item id="pass-login">
     <!--ion-label fixed>Password</ion-label-->
-    <ion-input name="leaf" type="password" placeholder="Password"></ion-input>
+    <ion-input  type="password" name="password" placeholder="Password" name='password' [(ngModel)]="password" ></ion-input>
   </ion-item>
-<button ion-button color="primary" round>Login</button>
-</ion-list>
+    <!--ion-item>
+        <ion-label floating>content</ion-label>  
+        <ion-input type='textbox'  ></ion-input>
+    </ion-item-->
+    
+    <pre>                            <button type="submit" ion-button (click)="login(username,password)">Login</button></pre>
+</ion-card>
+     
+    <br>
+
+    
+     
 </ion-content>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
