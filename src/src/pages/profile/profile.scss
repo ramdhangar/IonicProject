@@ -1,0 +1,52 @@
+page-profile {
+.bg-image
+{
+background-image: url('../assets/imgs/bg.png');
+background-repeat: no-repeat;
+background-size: contain;
+background-position: center;
+
+
+}
+}
+.title-image {
+    margin-top: 8px;
+    height: 27px;
+}
+#l1
+{
+    margin-left:20px;
+}
+
+#l2{
+     margin-left: 600px;
+margin-top: -40px 
+}
+#l3
+{
+  margin-left: 1160px;
+margin-top: -45px;  
+}
+.rehdr
+{
+    position: right;
+    
+    margin-top: -10px;
+    margin-left: 100px;
+    
+}
+
+.notifybell {
+    //background-color: beige;
+    position: right;
+   //width:100vw;
+    //bottom:0;
+    //right:0;
+    
+   
+    margin-top: -30px; 
+    margin-left: 1160px;
+    size:100vm;   
+    color: black ;
+        
+}
