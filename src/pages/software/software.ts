@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { serviceComponent } from './../../app/app.services';
 /**
  * Generated class for the SoftwarePage page.
  *
@@ -12,11 +12,26 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-software',
   templateUrl: 'software.html',
+  providers:[serviceComponent],
 })
 export class SoftwarePage {
+public softwareData: any;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private userService: serviceComponent) {
+      }
+      ngOnInit(){
+        this.getsoftwaresData();
+      }
+      getsoftwaresData(){
+        return this.userService.getsoftwares()
+        .subscribe((res)=>{
+          this.softwareData = JSON.parse(JSON.stringify(res.response));
+          console.log('this.softwareData', this.softwareData);
+        });
+      }
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SoftwarePage');

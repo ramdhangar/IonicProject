@@ -1,53 +1,20 @@
-<!--
-  Generated template for the ResourcePage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<!--ion-header>
-   
-  <ion-navbar color="primary">
-    <ion-title>This is Resource Page</ion-title>
-  </ion-navbar>
-
-</ion-header-->
-
 <ion-header class="myheader">
-    
-  
-    <ion-navbar color="mybg" >
-      
-        
+    <ion-navbar color="mybg">
         <h6 color="white" id="l1">Resource</h6>
-        
-<img alt="logo" height="65" width="200"  src="../assets/imgs/zensar.png" id="l2"> 
-        <ion-buttons  >
-            <button ion-button   id="l3" (click)="Settings" ><ion-icon name="md-notifications"></ion-icon></button>
+        <img alt="logo" height="65" width="200" src="../assets/imgs/.png" id="l2">
+        <ion-buttons>
+            <button ion-button id="l3" (click)="Settings">
+                <ion-icon name="md-notifications"></ion-icon>
+            </button>
         </ion-buttons>
-
     </ion-navbar>
 </ion-header>
 
-
-<ion-content  > 
+<ion-content>
     <h1>This is Resource Page</h1>
-   
-<ion-tabs color="mybg"  selectedIndex="0" class="restabs">
-  
-      <ion-tab [root]="peoplePage" tabTitle="People" tabIcon="md-person-add"></ion-tab>
-      <ion-tab [root]="assetPage" tabTitle="Asset" tabIcon="laptop"></ion-tab>
-      <ion-tab [root]="softwarePage" tabTitle="Software" tabIcon="logo-windows"></ion-tab>
-      
-</ion-tabs>
-    
+    <ion-tabs color="mybg" selectedIndex="0" class="restabs">
+        <ion-tab [root]="peoplePage" tabTitle="People" tabIcon="md-person-add"></ion-tab>
+        <ion-tab [root]="assetPage" tabTitle="Asset" tabIcon="laptop"></ion-tab>
+        <ion-tab [root]="softwarePage" tabTitle="Software" tabIcon="logo-windows"></ion-tab>
+    </ion-tabs>
 </ion-content>
-
-
-
-
-
-    
-
-    
-
-

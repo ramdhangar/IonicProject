@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, AlertController } from 'ionic-angular';
-import {DataProvider} from '../../providers/data/data';
-import { HomePage} from '../home/home';
 
 /**
  * Generated class for the LoginPage page.
@@ -17,34 +15,30 @@ import { HomePage} from '../home/home';
 })
 export class LoginPage {
 
-
-constructor(public navCtrl: NavController, public alertCtrl:AlertController, public data:DataProvider) {
-
+constructor(public navCtrl: NavController, public alertCtrl:AlertController) {
   }
 
-mylogin =
-{
-name:'admin',
-pass:12345
-}
 
+
+/*Login Function*/
 login(username,password)
-  {
-if((username===this.mylogin.name)&&(password==this.mylogin.pass))
 {
-alert('successfully login');
+console.log('username is : '+username);
+console.log('password is : ' + password);
+let alert=this.alertCtrl.create({
+ 
+title:'Logged In User',
+subTitle:username+' ' +password,
+buttons:['ok']
 
-console.log("DataProvider"+this.data.ss());
-this.navCtrl.push(HomePage);
 
-console.log("Name"+this.data.ss());
+});
+alert.present();
 
 
 
 }
-else
-alert('Invalid username & Password...');
-  }
+
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad LoginPage');

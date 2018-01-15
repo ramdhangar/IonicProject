@@ -1,8 +1,5 @@
 import { NgModule } from '@angular/core';
 import { IonicPageModule } from 'ionic-angular';
-
-
-
 import { ResourcePage } from './resource';
 
 @NgModule({
@@ -14,8 +11,4 @@ import { ResourcePage } from './resource';
   ],
 })
 export class ResourcePageModule {
-
-
-
-
 }

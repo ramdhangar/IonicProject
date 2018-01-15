@@ -19,7 +19,7 @@ http.createServer(function (req, res) {
 			break;
 		case '/getprojectdata':
 			query = 'SELECT * FROM `project`';
-			break
+      break;
 		case '/getsoftwaredata':
 			query = 'SELECT * FROM `software`';
 			break;
