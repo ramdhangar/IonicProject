@@ -12,6 +12,7 @@ import { PeoplePage } from '../people/people';
 import { AssetPage } from '../asset/asset';
 import { SoftwarePage } from '../software/software';
 
+
 @IonicPage()
 @Component({
   selector: 'page-resource',
@@ -19,10 +20,12 @@ import { SoftwarePage } from '../software/software';
 })
 export class ResourcePage {
 
- 
+constructor(public navCtrl: NavController) {
+
+}
+
 peoplePage = PeoplePage ;
 assetPage = AssetPage ;
 softwarePage = SoftwarePage;
-
 
 }

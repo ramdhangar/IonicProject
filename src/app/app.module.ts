@@ -3,6 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
@@ -14,11 +15,10 @@ import { LoginPage } from '../pages/login/login';
 
 import { PeoplePage } from '../pages/people/people';
 import { AssetPage } from '../pages/asset/asset';
+
+
 import { TabsPage } from '../pages/tabs/tabs';
 import { SoftwarePage } from '../pages/software/software';
-import { DataProvider} from '../providers/data/data';
-
-
 
 @NgModule({
   declarations: [
@@ -27,6 +27,7 @@ import { DataProvider} from '../providers/data/data';
     ProfilePage,
     ResourcePage,
     FaqPage,
+
     PeoplePage,
     AssetPage,
     SoftwarePage,
@@ -35,6 +36,7 @@ import { DataProvider} from '../providers/data/data';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
     IonicModule.forRoot(MyApp,{tabsPlacement:'top'})
   ],
   bootstrap: [IonicApp],
@@ -44,20 +46,18 @@ import { DataProvider} from '../providers/data/data';
     ProfilePage,
     ResourcePage,
     FaqPage,
+
     PeoplePage,
     AssetPage,
     SoftwarePage,
     LoginPage,
+
     TabsPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    
-   DataProvider,  /*I created Data provider*/
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    
-   
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

@@ -18,11 +18,6 @@ export class ProfilePage {
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-profileNotfy()
-{
-alert('This is Profile Notify..');
-}
-
   ionViewDidLoad() {
     console.log('ionViewDidLoad ProfilePage');
   }

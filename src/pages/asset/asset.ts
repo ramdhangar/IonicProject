@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-
+import { serviceComponent } from './../../app/app.services';
 /**
  * Generated class for the AssetPage page.
  *
@@ -12,11 +12,24 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 @Component({
   selector: 'page-asset',
   templateUrl: 'asset.html',
+  providers:[serviceComponent],
 })
 export class AssetPage {
-
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+public assetData:any;
+  constructor(public navCtrl: NavController,
+              public navParams: NavParams,
+              private userService:serviceComponent) {
+    }
+    ngOnInit(){
+      this.getAssetData();
+    }
+    getAssetData(){
+      return this.userService.getassets()
+      .subscribe((res)=>{
+        this.assetData = JSON.parse(JSON.stringify(res.response));
+        console.log('this.assetData', this.assetData);
+      });
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad AssetPage');
