@@ -1,5 +1,5 @@
 
-    
+
     /*.bg{
         background: radial-gradient(#905779 5%,#fff 100%);
     }*/
@@ -13,12 +13,26 @@ background-position: center;
 
 
 }
-
+h6 {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+    width: 21VW;
+}
+#l2{
+  margin: 0;
+  width: 29VW;
+  height: 40px;
+}
+.toolbar-content.toolbar-content-md{
+  height: 87px;
+padding-top: 25px;
+}
 }
 
 .restabs
 {
-    
+
     margin-top: -60px;
-    
+
 }

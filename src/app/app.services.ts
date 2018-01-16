@@ -14,11 +14,12 @@ providers: [],
 bootstrap: [serviceComponent]})
 
 export class serviceComponent{
-    private _getallUrl:string = 'http://localhost:8080/getalldata';
+    private _getallUrl:string = 'http://localhost:8080/getpeople';
     private _getsoftwareUrl:string = 'http://localhost:8080/getsoftwaredata';
     private _getprojectUrl:string = 'http://localhost:8080/getprojectdata';
     private _getuserUrl:string = 'http://localhost:8080/getuserdata';
     private _getassetUrl:string = 'http://localhost:8080/getassetdata';
+    private _authentication:string = 'http://localhost:8080/authentication';
 
     constructor(public _http:Http){
     }
@@ -40,6 +41,10 @@ export class serviceComponent{
     }
     getassets(){
       return this._http.get(this._getassetUrl)
+      .map((res:Response) => res.json());
+    }
+    validateUser(){
+      return this._http.get(this.authentication)
       .map((res:Response) => res.json());
     }
 }
