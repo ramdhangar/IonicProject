@@ -21,7 +21,7 @@ http.createServer(function (req, res) {
 			query = 'SELECT * FROM `project`';
       break;
 		case '/getsoftwaredata':
-			query = "select u.user_id,CONCAT(u.first_name, ' ', u.last_name) as name,s.asset_no,s.software,s.eform_no,s.type,s.expiry from software s,user u where s.asset_no=u.asset_no and s.asset_no in (select asset_no from user where project_id='ATVIAMS')";
+			query = "select u.user_id,CONCAT(u.first_name, ' ', u.last_name) as name,s.asset_no,s.software,s.eform_no,s.type from software s,user u where s.asset_no=u.asset_no and s.asset_no in (select asset_no from user where project_id='ATVIAMS')";
 			break;
 		case '/getuserdata':
 			query = 'SELECT * FROM `user`';
@@ -34,6 +34,9 @@ http.createServer(function (req, res) {
     	break;
     case '/authentication':
   			query = 'select user_id,role_id,project_id from user where user_id="AN48808" and PASSWORD="anitha@123"';
+    	break;
+    case '/getUser':
+  			query = "select u.user_id,CONCAT(u.first_name, ' ', u.last_name) as name,a.asset_no,a.purchase_date,a.allocate_date,a.expiry_date,a.model_num from asset a,user u where a.asset_no=u.asset_no and a.asset_no in (select asset_no from user where user_id='SB38808')";
     	break;
 		default:
 	}

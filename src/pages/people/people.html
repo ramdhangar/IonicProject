@@ -6,10 +6,12 @@
 <ion-content padding class="bg-image">
   <h1>People Page</h1>
    <br><br><br><br>
-  <ion-grid  *ngFor="let item of empData">
+  <ion-grid  *ngFor="let item of empData; let i=index" (click)="toggleGroup(i)" [ngClass]="{active: isGroupShown(i)}">
     <ion-row text-center style="background: lightblue;">
-      <ion-col>Name: {{item.first_name}} {{item.last_name}}
-            <br /> Mobile: {{item.mobile}} <br /> ID: {{item.user_id}}
+      <ion-col>Name: {{item.first_name}} {{item.last_name}} Mobile: {{item.mobile}} ID: {{item.user_id}}
+            <div *ngIf="isGroupShown(i)">
+              Mobile: {{assetDetails}}
+            </div>
       </ion-col>
     </ion-row>
   </ion-grid>

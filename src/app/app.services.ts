@@ -20,6 +20,8 @@ export class serviceComponent{
     private _getuserUrl:string = 'http://localhost:8080/getuserdata';
     private _getassetUrl:string = 'http://localhost:8080/getassetdata';
     private _authentication:string = 'http://localhost:8080/authentication';
+    private _getUser:string = 'http://localhost:8080/getUser';
+
 
     constructor(public _http:Http){
     }
@@ -44,7 +46,11 @@ export class serviceComponent{
       .map((res:Response) => res.json());
     }
     validateUser(){
-      return this._http.get(this.authentication)
+      return this._http.get(this._authentication)
+      .map((res:Response) => res.json());
+    }
+    getUserDetails(){
+      return this._http.get(this._getUser)
       .map((res:Response) => res.json());
     }
 }
