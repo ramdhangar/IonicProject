@@ -16,7 +16,7 @@ import { serviceComponent } from './../../app/app.services';
 })
 export class PeoplePage {
 public empData:any;
-public assetDetails:any;
+// public assetDetails:any;
   constructor(public navCtrl: NavController,
     public navParams: NavParams,
     private userService:serviceComponent) {
@@ -25,7 +25,7 @@ public assetDetails:any;
     this.getEmployeeData();
   }
   shownGroup = null;
-  // assetDetails = 'null';
+  assetDetails = {};
   toggleGroup(group) {
       if (this.isGroupShown(group)) {
           this.shownGroup = null;
